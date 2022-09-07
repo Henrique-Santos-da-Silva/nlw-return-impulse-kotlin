@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_primary"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    tools:context=".ui.confirm.FeedbackConfirmFragment">
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/done"
+        android:src="@drawable/bg_img_confirn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/acknowledgment_feedback"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_send_other_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_send_other_feedback_button"
+        android:fontFamily="@font/inter_regular"
+        android:paddingHorizontal="24dp"
+        android:text="@string/send_other_feedback"
+        android:textColor="@color/text_primary"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/copyright"
+        android:textColor="@color/text_secondary" />
+</LinearLayout>

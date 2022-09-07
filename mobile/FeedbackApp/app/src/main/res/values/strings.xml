@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Feedback App</string>
+    <string name="send_your_feedback">Send Your Feedback</string>
+    <string name="copyright">Feito com ♥ pela Rocketseat</string>
+    <string name="feedback_title">Deixe seu feedback</string>
+    <string name="issue">Problema</string>
+    <string name="idea">Ideia</string>
+    <string name="other">Outro</string>
+    <string name="back">Back</string>
+    <string name="send_feedback">Enviar Feedback</string>
+    <string name="acknowledgment_feedback">Agradecemos o feedback!</string>
+    <string name="send_other_feedback">Quero enviar outro</string>
+    <string name="done">done</string>
+    <string name="remove_screenshot">Remover ScreenShot</string>
+</resources>

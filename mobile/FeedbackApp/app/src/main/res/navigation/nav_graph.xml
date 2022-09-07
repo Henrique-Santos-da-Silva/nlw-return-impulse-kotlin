@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/appMainFragment">
+    <fragment
+        android:id="@+id/appMainFragment"
+        android:name="br.com.rocketseat.nlw.impulse.feedbackapp.ui.main.AppMainFragment"
+        android:label="fragment_app_main"
+        tools:layout="@layout/fragment_app_main" >
+        <action
+            android:id="@+id/action_appMainFragment_to_feedbackMainFragment"
+            app:destination="@id/feedbackMainFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/feedbackMainFragment"
+        android:name="br.com.rocketseat.nlw.impulse.feedbackapp.ui.main.FeedbackMainFragment"
+        tools:layout="@layout/fragment_feedback_main"
+        android:label="FeedbackMainFragment" >
+        <action
+            android:id="@+id/action_feedbackMainFragment_to_feedbackDetailsFragment"
+            app:destination="@id/feedbackDetailsFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/feedbackDetailsFragment"
+        android:name="br.com.rocketseat.nlw.impulse.feedbackapp.ui.details.FeedbackDetailsFragment"
+        android:label="fragment_feedback_details"
+        tools:layout="@layout/fragment_feedback_details" >
+        <action
+            android:id="@+id/action_feedbackDetailsFragment_to_feedbackConfirmFragment"
+            app:destination="@id/feedbackConfirmFragment" />
+        <argument
+            android:name="feedback_card_info_args"
+            app:argType="br.com.rocketseat.nlw.impulse.feedbackapp.ui.ui_utils.FeedbackCardItems" />
+    </dialog>
+    <dialog
+        android:id="@+id/feedbackConfirmFragment"
+        android:name="br.com.rocketseat.nlw.impulse.feedbackapp.ui.confirm.FeedbackConfirmFragment"
+        android:label="fragment_feedback_confirm"
+        tools:layout="@layout/fragment_feedback_confirm" >
+        <action
+            android:id="@+id/action_feedbackConfirmFragment_to_feedbackMainFragment"
+            app:popUpTo="@id/feedbackMainFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/feedbackMainFragment" />
+    </dialog>
+</navigation>
